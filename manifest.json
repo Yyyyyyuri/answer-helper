@@ -1,0 +1,23 @@
+{
+  "name": "斗鱼答题助手",
+  "short_name": "Helper",
+  "version": "1.0.0",
+  "description": "斗鱼答题助手",
+  "manifest_version": 2,
+
+  "browser_action": {
+    "default_title": "斗鱼答题助手"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://www.douyu.com/99999"],
+      "js": ["src/content.js"],
+      "run_at": "document_end"
+    }
+  ],
+
+  "permissions": [
+    "tabs", "https://www.douyu.com/99999"
+  ]
+}
